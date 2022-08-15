@@ -4,47 +4,47 @@ FROM nomnom;
 
 -- 2.
 SELECT DISTINCT neighborhood
-from nomnom;
+FROM nomnom;
 
 -- 3.
 SELECT DISTINCT cuisine
-from nomnom;
+FROM nomnom;
 
 -- 4.
 SELECT *
 FROM nomnom
-where cuisine = "Chinese";
+WHERE cuisine = "Chinese";
 
 -- 5.
 SELECT *
 FROM nomnom
-where review >= 4;
+WHERE review >= 4;
 
 -- 6.
 SELECT *
 FROM nomnom
-where cuisine = "Italian" AND price = "$$$";
+WHERE cuisine = "Italian" AND price = "$$$";
 
 -- 7.
 SELECT *
 FROM nomnom
-where name LIKE "%meatball%";
+WHERE name LIKE "%meatball%";
 
 -- 8.
 SELECT *
 FROM nomnom
-where neighborhood = "Midtown" OR
+WHERE neighborhood = "Midtown" OR
       neighborhood = "Downtown" OR
       neighborhood = "Chinatown";
 
 -- 9.
 SELECT *
 from nomnom
-where health is null;
+WHERE health is null;
 
 -- 10.
 SELECT *
-from nomnom
+FROM nomnom
 order by review DESC
 LIMIT 10;
 
@@ -57,4 +57,4 @@ when review > 3 then "Good"
 when review > 2 then "fair"
 else "Poor"
 end as "Review"
-from nomnom;
+FROM nomnom;
